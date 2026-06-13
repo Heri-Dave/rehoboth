@@ -1,0 +1,99 @@
+// IMPORTS
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,600;1,700&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300;1,9..40,400&display=swap');
+
+// VARIABLES
+:root {
+  /* =========================
+     COLORS
+  ========================= */
+
+  /* Brand */
+  --color-primary: #6B1A2A;
+  --color-accent: #9B2335;
+
+  /* Backgrounds */
+  --color-page-bg: #FAF7F2;
+  --color-card-bg: #FDF9F5;
+  --color-section-bg: #F0E8E0;
+  --color-muted-bg: #EDE3D8;
+
+  /* Text */
+  --color-text: #1A0A0D;
+  --color-text-muted: #7A5C5C;
+
+  /* Utility */
+  --color-border: rgba(107, 26, 42, 0.15);
+  --color-input-bg: #F0E8E0;
+  --color-focus: #6B1A2A;
+  --color-error: #D4183D;
+
+  /* Text on colored backgrounds */
+  --color-on-primary: #FAF7F2;
+  --color-on-accent: #FAF7F2;
+  --color-on-error: #FFFFFF;
+
+  /* =========================
+     TYPOGRAPHY
+  ========================= */
+
+  --font-heading: "Playfair Display", serif;
+  --font-body: "DM Sans", sans-serif;
+
+  --font-size-xs: 0.75rem;      /* 12px */
+  --font-size-sm: 0.875rem;     /* 14px */
+  --font-size-base: 1rem;       /* 16px */
+  --font-size-lg: 1.125rem;     /* 18px */
+  --font-size-xl: 1.25rem;      /* 20px */
+  --font-size-2xl: 1.5rem;      /* 24px */
+  --font-size-3xl: 2rem;        /* 32px */
+  --font-size-4xl: 3rem;        /* 48px */
+  --font-size-5xl: 4rem;        /* 64px */
+
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-bold: 700;
+
+  /* =========================
+     LAYOUT
+  ========================= */
+
+  --border-radius: 0.625rem;
+
+  /* =========================
+     CHARTS
+  ========================= */
+
+  --chart-series-1: oklch(0.646 0.222 41.116);
+  --chart-series-2: oklch(0.6 0.118 184.704);
+  --chart-series-3: oklch(0.398 0.07 227.392);
+  --chart-series-4: oklch(0.828 0.189 84.429);
+  --chart-series-5: oklch(0.769 0.188 70.08);
+}
+// DEFAULT STYLES
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+h1 {
+  font-family: var(--font-heading);
+  font-size: var(--font-size-5xl);
+}
+
+h2 {
+  font-family: var(--font-heading);
+  font-size: var(--font-size-4xl);
+}
+
+h3 {
+  font-family: var(--font-heading);
+  font-size: var(--font-size-3xl);
+}
+
+body,
+p,
+button,
+input {
+  font-family: var(--font-body);
+  font-size: var(--font-size-base);
+}
