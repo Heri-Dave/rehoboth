@@ -1,7 +1,7 @@
-// IMPORTS
+/* IMPORTS */
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,600;1,700&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300;1,9..40,400&display=swap');
 
-// VARIABLES
+/* VARIABLES */
 :root {
   /* =========================
      COLORS
@@ -19,7 +19,7 @@
 
   /* Text */
   --color-text: #1A0A0D;
-  --color-text-muted: #7A5C5C;
+  --color-text-muted: #8d6767;
 
   /* Utility */
   --color-border: rgba(107, 26, 42, 0.15);
@@ -69,7 +69,7 @@
   --chart-series-4: oklch(0.828 0.189 84.429);
   --chart-series-5: oklch(0.769 0.188 70.08);
 }
-// DEFAULT STYLES
+/* DEFAULT STYLES */
 * {
     margin: 0;
     padding: 0;
@@ -96,4 +96,34 @@ button,
 input {
   font-family: var(--font-body);
   font-size: var(--font-size-base);
+}
+/* ====== PAGE DESIGNS ====== */
+/* HEADER */
+header {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+header #announcement-banner {
+  display: flex;
+  justify-content: center;
+  gap: 0.75rem;
+  align-items: center;
+  background-color: var(--color-primary);
+  color: var(--color-on-primary);
+  text-align: center;
+  padding: 1rem 1rem;
+  letter-spacing: 0.05em;
+}
+header #announcement-banner p {
+  font-size: 1.05rem;
+  letter-spacing: 0.25rem;
+  color: var(--color-text-muted);
+}
+header #announcement-banner a {
+  font-size: 1rem;
+  letter-spacing: 0.25rem;
+  color: var(--color-section-bg); 
+  text-decoration: none;
 }
