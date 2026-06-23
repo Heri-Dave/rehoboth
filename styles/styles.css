@@ -1,129 +1,185 @@
-/* IMPORTS */
+/* -- IMPORTS -- */
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,600;1,700&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300;1,9..40,400&display=swap');
-
-/* VARIABLES */
+/* -- DESIGN TEMPLATE -- 
+   This is a base CSS file design template.
+   It defines color variables, typography, and basic element styles.
+   You can customize the colors and fonts by modifying the variables below.
+*/
 :root {
-  /* =========================
-     COLORS
-  ========================= */
+  --font-size: 16px;
 
-  /* Brand */
-  --color-primary: #6B1A2A;
-  --color-accent: #9B2335;
+  /* ── Backgrounds ── */
+  --background:        #FAF7F2;   /* warm ivory page background */
+  --foreground:        #1A0A0D;   /* near-black text */
+  --card:              #FDF9F5;   /* card / panel surface */
+  --card-foreground:   #1A0A0D;
+  --popover:           #FDF9F5;
+  --popover-foreground: #1A0A0D;
 
-  /* Backgrounds */
-  --color-page-bg: #FAF7F2;
-  --color-card-bg: #FDF9F5;
-  --color-section-bg: #F0E8E0;
-  --color-muted-bg: #EDE3D8;
+  /* ── Brand colours ── */
+  --primary:           #6B1A2A;   /* deep maroon — main CTA, headings accent */
+  --primary-foreground: #FAF7F2;  /* ivory text on maroon */
+  --accent:            #9B2335;   /* slightly brighter maroon for hover states */
+  --accent-foreground: #FAF7F2;
 
-  /* Text */
-  --color-text: #1A0A0D;
-  --color-text-muted: #8d6767;
+  /* ── Neutral surfaces ── */
+  --secondary:         #F0E8E0;   /* warm blush — section backgrounds */
+  --secondary-foreground: #1A0A0D;
+  --muted:             #EDE3D8;   /* soft tan — image placeholders, tags */
+  --muted-foreground:  #7A5C5C;   /* dusty rose-brown — captions, labels */
 
-  /* Utility */
-  --color-border: rgba(107, 26, 42, 0.15);
-  --color-input-bg: #F0E8E0;
-  --color-focus: #6B1A2A;
-  --color-error: #D4183D;
+  /* ── Utility ── */
+  --destructive:       #d4183d;
+  --destructive-foreground: #ffffff;
+  --border:            rgba(107, 26, 42, 0.15);  /* faint maroon hairlines */
+  --input:             transparent;
+  --input-background:  #F0E8E0;
+  --switch-background: #C8A8A8;
+  --ring:              #6B1A2A;
+  --radius:            0.625rem;
 
-  /* Text on colored backgrounds */
-  --color-on-primary: #FAF7F2;
-  --color-on-accent: #FAF7F2;
-  --color-on-error: #FFFFFF;
-
-  /* =========================
-     TYPOGRAPHY
-  ========================= */
-
-  --font-heading: "Playfair Display", serif;
-  --font-body: "DM Sans", sans-serif;
-
-  --font-size-xs: 0.75rem;      /* 12px */
-  --font-size-sm: 0.875rem;     /* 14px */
-  --font-size-base: 1rem;       /* 16px */
-  --font-size-lg: 1.125rem;     /* 18px */
-  --font-size-xl: 1.25rem;      /* 20px */
-  --font-size-2xl: 1.5rem;      /* 24px */
-  --font-size-3xl: 2rem;        /* 32px */
-  --font-size-4xl: 3rem;        /* 48px */
-  --font-size-5xl: 4rem;        /* 64px */
-
-  --font-weight-normal: 400;
+  /* ── Typography weights ── */
   --font-weight-medium: 500;
-  --font-weight-bold: 700;
-
-  /* =========================
-     LAYOUT
-  ========================= */
-
-  --border-radius: 0.625rem;
-
-  /* =========================
-     CHARTS
-  ========================= */
-
-  --chart-series-1: oklch(0.646 0.222 41.116);
-  --chart-series-2: oklch(0.6 0.118 184.704);
-  --chart-series-3: oklch(0.398 0.07 227.392);
-  --chart-series-4: oklch(0.828 0.189 84.429);
-  --chart-series-5: oklch(0.769 0.188 70.08);
+  --font-weight-normal: 400;
 }
-/* DEFAULT STYLES */
+/* ── Dark mode (kept for completeness) ── */
+.dark {
+  --background: oklch(0.145 0 0);
+  --foreground: oklch(0.985 0 0);
+  --card:        oklch(0.145 0 0);
+  --card-foreground: oklch(0.985 0 0);
+  --primary:    oklch(0.985 0 0);
+  --primary-foreground: oklch(0.205 0 0);
+  --secondary:  oklch(0.269 0 0);
+  --secondary-foreground: oklch(0.985 0 0);
+  --muted:      oklch(0.269 0 0);
+  --muted-foreground: oklch(0.708 0 0);
+  --accent:     oklch(0.269 0 0);
+  --accent-foreground: oklch(0.985 0 0);
+  --border:     oklch(0.269 0 0);
+  --ring:       oklch(0.439 0 0);
+}
+
+/* ------------------------------------------------ */
+/* -- ELEMENT STYLES -- 
+   These are the base styles for common HTML elements.
+   You can customize these styles or add new ones as needed.
+*/
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-h1 {
-  font-family: var(--font-heading);
-  font-size: var(--font-size-5xl);
-}
-
-h2 {
-  font-family: var(--font-heading);
-  font-size: var(--font-size-4xl);
-}
-
-h3 {
-  font-family: var(--font-heading);
-  font-size: var(--font-size-3xl);
-}
-
-body,
-p,
-button,
-input {
-  font-family: var(--font-body);
-  font-size: var(--font-size-base);
-}
-/* ====== PAGE DESIGNS ====== */
-/* HEADER */
-header {
   margin: 0;
   padding: 0;
-  display: flex;
-  flex-direction: column;
+  box-sizing: border-box;
+  border-color: var(--border);
 }
-header #announcement-banner {
-  display: flex;
-  justify-content: center;
-  gap: 0.75rem;
-  align-items: center;
-  background-color: var(--color-primary);
-  color: var(--color-on-primary);
-  text-align: center;
-  padding: 1rem 1rem;
-  letter-spacing: 0.05em;
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: 'DM Sans', sans-serif;
+  font-size: var(--font-size);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
 }
-header #announcement-banner p {
-  font-size: 1.05rem;
-  letter-spacing: 0.25rem;
-  color: var(--color-text-muted);
+
+/* Display headings — Playfair Display */
+h1, h2, h3 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  line-height: 1.15;
+  color: var(--foreground);
 }
-header #announcement-banner a {
-  font-size: 1rem;
-  letter-spacing: 0.25rem;
-  color: var(--color-section-bg); 
-  text-decoration: none;
+
+/* Body headings — DM Sans */
+h4, h5, h6 {
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 500;
+  line-height: 1.4;
 }
+
+/* Buttons */
+button, .btn {
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background-color 0.2s, color 0.2s, opacity 0.2s;
+}
+
+/* Primary button */
+.btn-primary {
+  background-color: var(--primary);
+  color: var(--primary-foreground);
+  padding: 1rem 2.5rem;
+  border: none;
+}
+.btn-primary:hover {
+  background-color: var(--accent);
+}
+
+/* Outlined button */
+.btn-outline {
+  background-color: transparent;
+  color: var(--primary);
+  border: 1px solid var(--primary);
+  padding: 0.75rem 1.5rem;
+}
+.btn-outline:hover {
+  background-color: var(--primary);
+  color: var(--primary-foreground);
+}
+
+/* Inputs */
+input, textarea, select {
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 400;
+  background-color: var(--input-background);
+  border: 1px solid var(--border);
+  color: var(--foreground);
+  padding: 0.75rem 1rem;
+  outline: none;
+  transition: border-color 0.2s;
+}
+input:focus, textarea:focus, select:focus {
+  border-color: var(--primary);
+}
+
+/* Section label / eyebrow text */
+.eyebrow {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.72rem;
+  font-weight: 400;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--primary);
+}
+
+/* Muted caption text */
+.caption {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.78rem;
+  font-weight: 300;
+  color: var(--muted-foreground);
+  line-height: 1.7;
+}
+
+/* Hairline divider */
+hr, .divider {
+  border: none;
+  border-top: 1px solid var(--border);
+  margin: 2rem 0;
+}
+
+/* Ingredient / tag pill */
+.tag {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  border: 1px solid rgba(107, 26, 42, 0.25);
+  color: rgba(107, 26, 42, 0.8);
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.68rem;
+  letter-spacing: 0.06em;
+}
+
+/* Scrollbar — hidden by default */
+::-webkit-scrollbar { width: 0; }
