@@ -20,6 +20,7 @@
     <!-- HEADER -->
     <div id="announcement-banner"> <!-- Announcements -->
         <svg
+        class="announcement-icon"
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 24 24"
         >
@@ -59,11 +60,77 @@
                 </a>
                 
         </div>
+        <button id="mobile-menu-toggle" class="menu-toggle" aria-label="Toggle menu" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <div id="mobile-menu" class="mobile-menu" aria-hidden="true">
+            <div class="mobile-menu-links">
+                <button type="button" class="mobile-nav-link" data-target="Products">PRODUCTS</button>
+                <button type="button" class="mobile-nav-link" data-target="Brand">BRAND</button>
+                <button type="button" class="mobile-nav-link" data-target="Contact Us">CONTACT US</button>
+            </div>
+            <div class="mobile-menu-social">
+                <a href="#" aria-label="Instagram" class="mobile-sm-icon">
+                    <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="2" y="2" width="20" height="20" rx="4.5" fill="none" stroke="currentColor" stroke-width="2"/>
+                        <circle cx="12" cy="12" r="3.5" fill="none" stroke="currentColor" stroke-width="2"/>
+                        <circle cx="17.5" cy="6.5" r="1" fill="currentColor"/>
+                    </svg>
+                </a>
+                <a href="#" aria-label="Twitter" class="mobile-sm-icon">
+                    <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24h-6.657l-5.207-6.806-5.979 6.806H2.556l7.73-8.835L1.966 2.25h6.837l4.716 6.231 5.429-6.231zM17.009 18.875h1.832L6.75 3.956H4.822l12.187 14.919z"/>
+                    </svg>
+                </a>
+                <a href="#" aria-label="TikTok" class="mobile-sm-icon">
+                    <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.68v13.7a2.4 2.4 0 1 1-2.4-2.4c.34 0 .67.04 1 .12V7.07A6.7 6.7 0 0 0 8.56 7c-3.71 0-6.7 3-6.7 6.7s2.99 6.7 6.7 6.7c3.52 0 6.43-2.61 6.7-6v-8c1.42 1.01 3.3 1.59 5.3 1.59v-3.68c-1.45-.29-2.78-.91-3.85-1.82z"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
     </header>
     <!-- MAIN CONTENT -->
     <main>
+        <!-- HERO SECTION -->
+        <section id="hero-section" class="hero-section">
+            <svg class="hero-decorative" viewBox="0 0 1440 900" preserveAspectRatio="none" aria-hidden="true">
+                <path d="M-100,300 Q200,100 500,350 T1000,200 T1600,350" fill="none" stroke="#6B1A2A" stroke-width="1.5" />
+                <path d="M-100,500 Q300,300 700,500 T1200,350 T1600,500" fill="none" stroke="#6B1A2A" stroke-width="1" />
+            </svg>
+
+            <div class="hero-inner">
+                <h1 class="hero-brand-row">REHOBOTH</h1>
+
+                <div class="hero-copy-row">
+                    <a
+                        href="https://wa.me/97134375937?text=Hi%2C%20I'd%20like%20to%20place%20an%20order%20for%20Rehoboth%20Herbal%20Hair%20Growth%20Oil"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="hero-cta"
+                    >
+                        Order on WhatsApp
+                    </a>
+                    <div class="hero-tagline">
+                        <p>
+                            Try out our Herbal Hair Growth Oil — naturally formulated with Rosemary, Argan &amp; Avocado for stronger, fuller hair.
+                        </p>
+                        <div class="hero-divider"></div>
+                        <p class="hero-meta">100% Herbal · No Parabens · No Silicones</p>
+                    </div>
+                </div>
+            </div>
+            <a href="#footer" class="hero-scroll" aria-label="Scroll to footer">
+                <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" fill="currentColor">
+                    <path d="M12 16.5l-6-6 1.4-1.4L12 13.7l4.6-4.6L18 10.5z" />
+                </svg>
+            </a>
+        </section>
     </main>
     <!-- FOOTER -->
-    <footer></footer>
+    <footer id="footer"></footer>
+    <script defer src="scripts/navbar.js"></script>
 </body>
 </html>
