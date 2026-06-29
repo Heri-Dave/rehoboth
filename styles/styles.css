@@ -609,7 +609,7 @@ main #hero-section .hero-actions .btn {
 /* Product section */
 .product-spotlight {
   padding: 5rem 8.5rem 6rem;
-  background-color: var(--secondary);
+  background-color: #FAF7F2;
 }
 .product-spotlight-inner {
   max-width: 90rem;
@@ -958,4 +958,155 @@ main #hero-section .hero-actions .btn {
   letter-spacing: 0.12em;
   text-transform: uppercase;
   opacity: 0.8;
+}
+/* Testimonials section */
+#testimonials {
+  padding: 96px 0;
+  background: var(--foreground);
+}
+ 
+.testimonials-inner {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 48px;
+}
+
+/* ── Header ── */
+.testimonials-header {
+  text-align: center;
+  margin-bottom: 56px;
+}
+
+.testimonials-eyebrow {
+  font-family: "DM Sans", sans-serif;
+  font-size: 0.75rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--primary);
+  margin-bottom: 12px;
+}
+
+.testimonials-title {
+  font-family: "Playfair Display", serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 1.15;
+  color: var(--primary-foreground);
+}
+
+/* ── Card ── */
+.testimonial-card {
+  position: relative;
+  background: #6b1a2a43;
+  border: 1px solid var(--border);
+  padding: 56px;
+}
+
+.testimonial-body {
+  display: flex;
+  align-items: flex-start;
+  gap: 32px;
+}
+
+/* ── Content ── */
+.testimonial-content {
+  flex: 1;
+}
+
+.testimonial-stars {
+  display: flex;
+  gap: 4px;
+  margin-bottom: 16px;
+}
+
+.star-icon {
+  width: 14px;
+  height: 14px;
+  color: #fbbf24;
+  fill: #fbbf24;
+}
+
+.testimonial-quote {
+  font-family: "Playfair Display", serif;
+  font-style: italic;
+  font-size: 1.15rem;
+  line-height: 1.7;
+  color: rgba(250, 247, 242, 0.85);
+  margin-bottom: 24px;
+}
+
+.testimonial-name {
+  font-family: "DM Sans", sans-serif;
+  font-weight: 500;
+  font-size: 0.9rem;
+  color: rgba(250, 247, 242, 0.722);
+}
+
+.testimonial-role {
+  font-family: "DM Sans", sans-serif;
+  font-weight: 300;
+  font-size: 0.75rem;
+  letter-spacing: 0.03em;
+  color: rgba(250, 247, 242, 0.4);
+  margin-top: 2px;
+}
+
+/* ── Nav buttons ── */
+.testimonial-nav {
+  position: absolute;
+  bottom: -20px;
+  right: 40px;
+  display: flex;
+  gap: 8px;
+}
+
+.nav-btn {
+  width: 40px;
+  height: 40px;
+  border: 1px solid var(--primary);
+  background: transparent;
+  color: rgba(250, 247, 242, 0.6);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s, color 0.2s, border-color 0.2s;
+}
+
+.nav-btn:hover {
+  background: var(--primary);
+  color: var(--primary-foreground);
+}
+
+.nav-btn svg {
+  width: 16px;
+  height: 16px;
+  stroke: currentColor;
+  fill: none;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+/* ── Dot indicators ── */
+.testimonial-dots {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 40px;
+}
+
+.dot-btn {
+  height: 4px;
+  border: none;
+  background: #6b1a2a4e;
+  cursor: pointer;
+  padding: 0;
+  transition: width 0.3s, background 0.3s;
+  width: 8px;
+}
+
+.dot-btn.active {
+  width: 32px;
+  background: var(--primary);
 }
